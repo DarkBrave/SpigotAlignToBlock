@@ -1,0 +1,10 @@
+name: SpigotAlignToBlock
+version: '${version}'
+
+main: com.darkbrave.spigotAlignToBlock.SpigotAlignToBlock
+api-version: '26.1'
+
+commands:
+  align:
+    description: Use this command to align to the nearest half a block.
+    usage: /align

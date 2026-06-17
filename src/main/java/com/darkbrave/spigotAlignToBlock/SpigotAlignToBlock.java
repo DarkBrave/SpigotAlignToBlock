@@ -14,7 +14,9 @@ public final class SpigotAlignToBlock extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic
         PluginManager pm = getServer().getPluginManager();
-        Objects.requireNonNull(getCommand("align")).setExecutor((CommandExecutor)new AlignCommand());
+        Objects.requireNonNull(
+                getCommand("align")).setExecutor((CommandExecutor)new AlignCommand()
+        );
     }
 
     @Override

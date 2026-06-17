@@ -26,9 +26,13 @@ public class AlignCommand implements CommandExecutor
             newLocation.setX(newLocation.getBlockX()+0.5);
             newLocation.setY(newLocation.getBlockY());
             newLocation.setZ(newLocation.getBlockZ()+0.5);
-            newLocation.setPitch(Math.round(newLocation.getPitch()/10f)*10f);
-            newLocation.setYaw(Math.round(newLocation.getYaw()/90f)*90f);
 
+            float newPitch = Math.round(newLocation.getYaw()/90f)*90f;
+            float newYaw = Math.round(newLocation.getPitch()/10f)*10f;
+            newLocation.setPitch(newPitch);
+            newLocation.setYaw(newYaw);
+
+            player.setRotation(newYaw, newPitch);
             teleportEntity.teleport(newLocation);
             teleportEntity.setVelocity(new Vector(0,0,0));
         }
